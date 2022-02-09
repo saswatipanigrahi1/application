@@ -18,31 +18,37 @@
 
 
     <EditText
+        android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/username"
         android:layout_below="@+id/Signin"
-        android:hint="Username"
-        android:textColorHint="@color/black"
-        android:textColor="@color/black"
-        android:layout_margin="18dp"
-        android:padding="28dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
         android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:drawablePadding="18dp"/>
+        android:drawablePadding="18dp"
+        android:hint="Username"
+        android:padding="28dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
 
 
     <EditText
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/password"
         android:layout_below="@+id/username"
-        android:hint="password"
-        android:textColorHint="@color/black"
-        android:textColor="@color/black"
-        android:layout_margin="18dp"
-        android:padding="28dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="18dp"
         android:drawableLeft="@drawable/ic_baseline_info_24"
-        android:drawablePadding="18dp"/>
+        android:drawablePadding="18dp"
+        android:hint="password"
+        android:padding="28dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black" />
 
     <Button
         android:id="@+id/loginbtn"
