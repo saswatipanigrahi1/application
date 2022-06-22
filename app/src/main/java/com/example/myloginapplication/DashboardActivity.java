@@ -17,17 +17,11 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 public class DashboardActivity extends AppCompatActivity {
 
-    private TextView UsernameText;
-
-
     protected String userName;
     public DrawerLayout drawerLayout;
-    public Toolbar toolbar;
-    protected Button button;
     protected BottomSheetDialog bottomSheetDialog;
     protected Dialog dialog;
-    private final View algoButton = findViewById(R.id.algo_button);
-    private final View dialogButton = findViewById(R.id.dialog_button);
+    Button algoButton, dialogButton;
 
 
 
@@ -40,6 +34,8 @@ public class DashboardActivity extends AppCompatActivity {
 
         userName = getIntent().getStringExtra("username");
         drawerLayout = findViewById(R.id.my_drawer_layout);
+        algoButton = findViewById(R.id.algo_button);
+        dialogButton = findViewById(R.id.dialog_button);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.nav_open, R.string.nav_close);
         drawerLayout.addDrawerListener(actionBarDrawerToggle);
         actionBarDrawerToggle.syncState();
@@ -73,12 +69,30 @@ public class DashboardActivity extends AppCompatActivity {
     private void openBottomSheet() {
         bottomSheetDialog = new BottomSheetDialog(this);
         bottomSheetDialog.setContentView(R.layout.bottom_sheet_layout);
+        final Button bottomsheetButton = bottomSheetDialog.findViewById(R.id.close);
+
+        bottomsheetButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bottomSheetDialog.dismiss();
+            }
+        });
         bottomSheetDialog.show();
     }
 
     private void openDialog() {
         dialog = new Dialog(this);
         dialog.setContentView(R.layout.bottom_dialog_layout);
+        final Button dialog_close = dialog.findViewById(R.id.dialog_close);
+
+        dialog_close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+
         dialog.show();
     }
 

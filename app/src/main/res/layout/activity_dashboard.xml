@@ -22,9 +22,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="128dp"
             android:gravity="center"
-            android:text="HelloUser"
+            android:text="Dashboard"
+            android:padding="16sp"
             android:textSize="18sp"
             />
 
@@ -33,6 +33,9 @@
             android:id="@+id/algo_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="12dp"
+            android:textColor="@color/black"
             android:text="bottom sheet" />
 
         <Button
@@ -42,15 +45,10 @@
             android:layout_height="wrap_content"
             android:text="open dialog"/>
 
-
-
-
-
-
-
-
-
-
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom" />
 
     </LinearLayout>
 
