@@ -7,14 +7,17 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/Signin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/Signin"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="50dp"
+        android:gravity="center"
         android:text="Login"
         android:textColor="@color/cardview_dark_background"
-        android:textSize="35dp"
-        android:layout_margin="50dp"
-        android:gravity="center"/>
+        android:textSize="35dp" />
 
 
     <EditText
@@ -28,7 +31,7 @@
         android:layout_marginBottom="18dp"
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:drawablePadding="18dp"
-        android:hint="Username"
+        android:hint="mobile number"
         android:padding="28dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black" />
@@ -48,7 +51,9 @@
         android:hint="password"
         android:padding="28dp"
         android:textColor="@color/black"
-        android:textColorHint="@color/black" />
+        android:textColorHint="@color/black"
+        android:visibility="gone"
+        android:inputType="textPassword"/>
 
     <Button
         android:id="@+id/loginbtn"
